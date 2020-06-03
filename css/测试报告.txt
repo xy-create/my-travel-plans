@@ -1,0 +1,16 @@
+测试结果：
+#include "stdio.h"
+1.cpp(1): error 322: (Error -- Unable to open include file 'stdio.h')
+工具返回代码: 2
+
+PC-lint for C/C++ (NT) Vers. 9.00a, Copyright Gimpel Software 1985-2008
+工具返回代码: 1
+ 
+PC-lint for C/C++ (NT) Vers. 9.00a, Copyright Gimpel Software 1985-2008
+D:\desktop\.lnt(1): error 305: (Error -- Unable to open module 'Error')
+工具返回代码: 2
+ 
+分析：
+a)include <stdio.h>表示搜索stdio.h这个文件的路径在option中指定的位置，include "stdio.h"表示搜索stdio.h这个文件的路径在当前工作文件所在的位置，即""与<>表示搜索的路径不同。
+
+b).lnt(1)安装路径必须是绝对路径，或者把PC-Lint的安装路径放到系统的Path变量中。
